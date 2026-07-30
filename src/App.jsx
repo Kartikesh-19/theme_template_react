@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 
-const image = (name) =>
-  new URL(
-    `../wpriverthemes.com/HTML/drake/assets/images/${name}`,
-    import.meta.url,
-  ).href;
+const image = (name) => `/images/${name}`;
 const menu = [
   ["home", "/", "las la-home", "Home"],
   ["about", "/about", "lar la-user", "About"],
@@ -24,8 +20,14 @@ const social = [
   "lab la-github",
 ];
 const themeColors = [
-  "#28e98c", "#e4af12", "#fe6f1d", "#14c5fd",
-  "#c0c0c0", "#1338f3", "#f31313", "#ff99cc",
+  "#28e98c",
+  "#e4af12",
+  "#fe6f1d",
+  "#14c5fd",
+  "#c0c0c0",
+  "#1338f3",
+  "#f31313",
+  "#ff99cc",
 ];
 const skills = [
   ["figma.png", "92%", "Figma"],
@@ -70,7 +72,7 @@ function SectionTitle({ icon, eyebrow, children }) {
       <h4 className="subtitle">
         <Icon name={icon} /> {eyebrow}
       </h4>
-      <h1>{children}</h1>
+      {/* <h1>{children}</h1> */}
     </div>
   );
 }
@@ -80,11 +82,11 @@ function Sidebar() {
     <div className="left-sidebar">
       <div className="sidebar-header d-flex align-items-center justify-content-between">
         <img src={image("logo.png")} alt="Drake" />
-        <span className="designation">Framer Designer & Developer</span>
+        <span className="designation">Front End Developer</span>
       </div>
       <img className="me" src={image("me.jpg")} alt="Drake" />
-      <h2 className="email">hello@drake.design</h2>
-      <h2 className="address">Based in Los Angeles, CA</h2>
+      <h2 className="email">kartikeshsharma59@gmail.com</h2>
+      <h2 className="address">Based in Mohali/Chandigarh, India</h2>
       <p className="copyright">© 2022 Drake. All Rights Reserved</p>
       <ul className="social-profile d-flex align-items-center flex-wrap justify-content-center">
         {social.map((item) => (
@@ -95,9 +97,9 @@ function Sidebar() {
           </li>
         ))}
       </ul>
-        <Link to="/contact" className="theme-btn">
-          <Icon name="las la-envelope" /> Hire Me!
-        </Link>
+      <Link to="/contact" className="theme-btn">
+        <Icon name="las la-envelope" /> Hire Me!
+      </Link>
     </div>
   );
 }
@@ -123,7 +125,10 @@ function PageView({ routeId }) {
     return () => observer.disconnect();
   }, []);
   useEffect(() => {
-    document.documentElement.style.setProperty("--primary_color", themeColors[color]);
+    document.documentElement.style.setProperty(
+      "--primary_color",
+      themeColors[color],
+    );
   }, [color]);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -222,12 +227,12 @@ function PageView({ routeId }) {
               <div className="custom-container">
                 <div className="hero-content content-width">
                   <SectionTitle icon="las la-home" eyebrow="Introduce">
-                    Say Hi from <span>Drake</span>, Framer Designer and
+                    Say Hi from <span>Kartikesh</span>, Framer Designer and
                     Developer
                   </SectionTitle>
                   <p>
-                    I design and code beautifully simple things and I love what
-                    I do. Just simple like that!
+                    I design and developed the code beautifully simple things
+                    and I love what I do. Just simple like that!
                   </p>
                   <Link to="/portfolio" className="go-to-project-btn scroll-to">
                     <img src={image("round-text.png")} alt="Projects" />
@@ -235,7 +240,7 @@ function PageView({ routeId }) {
                   </Link>
                   <div className="facts d-flex">
                     <div className="left">
-                      <h1>10+</h1>
+                      <h1>5+</h1>
                       <p>
                         Years of
                         <br />
@@ -243,11 +248,10 @@ function PageView({ routeId }) {
                       </p>
                     </div>
                     <div className="right">
-                      <h1>182+</h1>
+                      <h1>12+</h1>
                       <p>
                         projects completed on
-                        <br />
-                        15 countries
+                        <br />3 countries
                       </p>
                     </div>
                   </div>
@@ -288,28 +292,21 @@ function PageView({ routeId }) {
                   <div className="resume-timeline">
                     {[
                       [
-                        "2020 - Present",
+                        "2024 - Present",
                         [
-                          "Framer Designer & Developer",
-                          "Brunodee Agency",
-                          "Front-End WordPress Developer",
-                          "Envato Market",
+                          "React Js Developer",
+                          "Outline Systems India",
+                          "Front-End Developer",
+                          "Full Time",
                         ],
                       ],
                       [
-                        "2013 - 2019",
+                        "2021 - 2023",
                         [
-                          "Webflow Developer & Co-Founder",
-                          "Designflow Studio",
-                          "Web Designer",
-                          "Freelance",
-                        ],
-                      ],
-                      [
-                        "2010 - 2013",
-                        [
-                          "Bachelor Degree of Information Technology",
-                          "US RMIT University",
+                          "React Executive",
+                          "Capanicus",
+                          "Web Developer(ReactJs)",
+                          "Full Time",
                         ],
                       ],
                     ].map(([date, roles]) => (
@@ -340,22 +337,16 @@ function PageView({ routeId }) {
                   <div className="services-items">
                     {[
                       [
-                        "las la-bezier-curve",
-                        "Website Design",
-                        "I create digital products with unique ideas using Figma & Framer",
-                        "24 Projects",
+                        "React Js Developer",
+                        "Website  Development",
+                        "I design and develop scalable digital products powered by modern Single Page Application (SPA) architecture.",
+                        "11 Projects",
                       ],
                       [
-                        "las la-code",
-                        "Development",
+                        "React Native ",
+                        "Mobile Development",
                         "I build websites that go live with Framer, Webflow or WordPress",
-                        "126 Projects",
-                      ],
-                      [
-                        "las la-chart-line",
-                        "SEO/Marketing",
-                        "I increase website traffic with SEO optimization",
-                        "8 Projects",
+                        "3 Projects",
                       ],
                     ].map(([icon, title, copy, projects]) => (
                       <div className="service-item" key={title}>
@@ -494,21 +485,21 @@ function PageView({ routeId }) {
                       <h2>basic</h2>
                       <p>Have design ready to build? Or small budget?</p>
                       <h1>
-                        $49 <span>/ hours</span>
+                        $10 <span>/ hours</span>
                       </h1>
-                        <Link to="/contact" className="theme-btn">
-                          pick this package
-                        </Link>
+                      <Link to="/contact" className="theme-btn">
+                        pick this package
+                      </Link>
                     </div>
                     <div className="pricing-item">
                       <h2>premium</h2>
                       <p>Not only a design but also want more options?</p>
                       <h1>
-                        $99 <span>/ hours</span>
+                        $15 <span>/ hours</span>
                       </h1>
-                        <Link to="/contact" className="theme-btn">
-                          pick this package
-                        </Link>
+                      <Link to="/contact" className="theme-btn">
+                        pick this package
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -523,7 +514,7 @@ function PageView({ routeId }) {
                   <SectionTitle icon="las la-envelope" eyebrow="contact">
                     Let’s Work <span>Together!</span>
                   </SectionTitle>
-                  <h3>hello@drake.design</h3>
+                  <h3>kartikeshsharma59@gamil.com</h3>
                   {sent && (
                     <p className="contact-form-status">
                       Thanks — your message has been recorded.
@@ -625,7 +616,9 @@ function Nav({ responsive = false, active, onClick }) {
         <li key={id}>
           <NavLink
             end={path === "/"}
-            className={({ isActive }) => `scroll-to ${isActive ? "active" : ""}`}
+            className={({ isActive }) =>
+              `scroll-to ${isActive ? "active" : ""}`
+            }
             to={path}
             onClick={onClick}
           >
@@ -639,11 +632,28 @@ function Nav({ responsive = false, active, onClick }) {
 }
 
 const routeIds = {
-  "/": "home", "/about": "about", "/resume": "resume", "/services": "services",
-  "/skills": "skills", "/portfolio": "portfolio", "/testimonials": "testimonial",
-  "/pricing": "pricing", "/contact": "contact",
+  "/": "home",
+  "/about": "about",
+  "/resume": "resume",
+  "/services": "services",
+  "/skills": "skills",
+  "/portfolio": "portfolio",
+  "/testimonials": "testimonial",
+  "/pricing": "pricing",
+  "/contact": "contact",
 };
 
 export default function App() {
-  return <Routes>{Object.entries(routeIds).map(([path, routeId]) => <Route key={path} path={path} element={<PageView routeId={routeId} />} />)}<Route path="*" element={<PageView routeId="home" />} /></Routes>;
+  return (
+    <Routes>
+      {Object.entries(routeIds).map(([path, routeId]) => (
+        <Route
+          key={path}
+          path={path}
+          element={<PageView routeId={routeId} />}
+        />
+      ))}
+      <Route path="*" element={<PageView routeId="home" />} />
+    </Routes>
+  );
 }

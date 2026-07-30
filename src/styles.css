@@ -1,11 +1,7 @@
-@import url('../maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css');
-@import url('../wpriverthemes.com/HTML/drake/assets/css/bootstrap.min.css');
-@import url('../wpriverthemes.com/HTML/drake/assets/css/owl.carousel.min.css');
-@import url('../wpriverthemes.com/HTML/drake/assets/css/owl.theme.default.min.css');
-@import url('../wpriverthemes.com/HTML/drake/assets/css/animate.min.css');
-@import url('../wpriverthemes.com/HTML/drake/assets/css/lightbox.min.css');
-@import url('../wpriverthemes.com/HTML/drake/assets/css/style.css');
-@import url('../wpriverthemes.com/HTML/drake/assets/css/responsive.css');
+@import url('/styles/line-awesome.min.css');
+@import url('/styles/bootstrap.min.css');
+@import url('/styles/style.css');
+@import url('/styles/responsive.css');
 
 html { scroll-behavior: smooth; --primary_color: #28e98c; }
 button { font: inherit; }
