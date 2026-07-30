@@ -72,7 +72,7 @@ function SectionTitle({ icon, eyebrow, children }) {
       <h4 className="subtitle">
         <Icon name={icon} /> {eyebrow}
       </h4>
-      {/* <h1>{children}</h1> */}
+      <h1>{children}</h1>
     </div>
   );
 }
@@ -87,7 +87,7 @@ function Sidebar() {
       <img className="me" src={image("me.jpg")} alt="Drake" />
       <h2 className="email">kartikeshsharma59@gmail.com</h2>
       <h2 className="address">Based in Mohali/Chandigarh, India</h2>
-      <p className="copyright">© 2022 Drake. All Rights Reserved</p>
+      <p className="copyright">© 2026 . All Rights Reserved</p>
       <ul className="social-profile d-flex align-items-center flex-wrap justify-content-center">
         {social.map((item) => (
           <li key={item}>
@@ -265,17 +265,21 @@ function PageView({ routeId }) {
               <div className="custom-container">
                 <div className="about-content content-width">
                   <SectionTitle icon="lar la-user" eyebrow="About">
-                    Every great design begins with
+                    Crafting modern web experiences
                     <br />
-                    an even <span>better story</span>
+                    with <span>React.js</span>
                   </SectionTitle>
+
                   <p>
-                    Since beginning my journey as a freelance designer nearly 8
-                    years ago, I’ve done remote work for agencies, consulted for
-                    startups, and collaborated with talented people to create
-                    digital products for business and consumer use. I’m quietly
-                    confident, naturally curious, and perpetually improving my
-                    craft.
+                    I'm a Frontend Developer specializing in React.js, focused
+                    on building responsive, scalable, and user-friendly web
+                    applications. I enjoy turning complex problems into clean,
+                    intuitive interfaces using modern technologies like React,
+                    JavaScript, TypeScript, Redux Toolkit, HTML5, and CSS3.
+                    Passionate about writing maintainable code, optimizing
+                    performance, and continuously learning new technologies, I
+                    strive to create seamless digital experiences that deliver
+                    real value to users and businesses.
                   </p>
                 </div>
               </div>
@@ -345,7 +349,7 @@ function PageView({ routeId }) {
                       [
                         "React Native ",
                         "Mobile Development",
-                        "I build websites that go live with Framer, Webflow or WordPress",
+                        "I build mobile app with React Native which is plateform independent",
                         "3 Projects",
                       ],
                     ].map(([icon, title, copy, projects]) => (
@@ -374,7 +378,7 @@ function PageView({ routeId }) {
                       <div className="col-md-3" key={name}>
                         <div className="skill">
                           <div className="skill-inner">
-                            <img src={image(file)} alt={name} />
+                            {/* <img src={image(file)} alt={name} /> */}
                             <h1 className="percent">{percent}</h1>
                           </div>
                           <p className="name">{name}</p>
