@@ -30,10 +30,15 @@ const themeColors = [
   "#ff99cc",
 ];
 const skills = [
-  ["figma.png", "92%", "Figma"],
-  ["framer.png", "85%", "Framer"],
-  ["webflow.png", "80%", "Webflow"],
+  ["figma.png", "92%", "HTML5 & CSS3"],
+  ["framer.png", "85%", "Tailwind CSS"],
+  ["framer.png", "85%", "Bootstrap"],
+  ["framer.png", "90%", "Material UI"],
+  ["framer.png", "80%", "JavaScript & TypeScript"],
   ["react.png", "90%", "React"],
+  ["node.png", "70%", "Node"],
+  ["mongodb.png", "70%", "MongoDB"],
+  ["python.png", "40%", "Python"],
 ];
 const portfolios = [
   ["portfolio1.jpg", "Bureau - Architecture Studio", "framer"],
@@ -45,22 +50,22 @@ const portfolios = [
 const testimonials = [
   [
     "testimonial-1.jpg",
-    "John Smith",
-    "CEO, Squarespace",
-    "Drake was a real pleasure to work with and we look forward to working with him again. He is definitely the kind of designer that you can trust with a project from start to finish.",
+    "Kartikesh Sharma",
+    "MERN STACK",
+    "Iam a passionate Frontend Developer(React) having 5+ years of experience   .",
   ],
-  [
-    "testimonial-2.jpg",
-    "Jonathan Doe",
-    "Director, Envato",
-    "Extremely professional and talented. The final result exceeded our expectations and made a meaningful impact on our product.",
-  ],
-  [
-    "testimonial-3.jpg",
-    "David Cooper",
-    "Founder, Webflow",
-    "A thoughtful creative partner with excellent communication and a sharp eye for details. Highly recommended.",
-  ],
+  // [
+  //   "testimonial-2.jpg",
+  //   "Jonathan Doe",
+  //   "Director, Envato",
+  //   "Extremely professional and talented. The final result exceeded our expectations and made a meaningful impact on our product.",
+  // ],
+  // [
+  //   "testimonial-3.jpg",
+  //   "David Cooper",
+  //   "Founder, Webflow",
+  //   "A thoughtful creative partner with excellent communication and a sharp eye for details. Highly recommended.",
+  // ],
 ];
 
 function Icon({ name }) {
@@ -81,12 +86,14 @@ function Sidebar() {
   return (
     <div className="left-sidebar">
       <div className="sidebar-header d-flex align-items-center justify-content-between">
-        <img src={image("logo.png")} alt="Drake" />
-        <span className="designation">Front End Developer</span>
+        {/* <img src={image("logo.png")} alt="Kartikesh" /> */}
+        <h4 style={{ display:'flex', color: "white", fontSize: "20px", fontWeight: "bold", text: "center", margin: "0 auto" }}
+        // className="designation"
+        >Front End Developer</h4>
       </div>
-      <img className="me" src={image("me.jpg")} alt="Drake" />
-      <h2 className="email">kartikeshsharma59@gmail.com</h2>
-      <h2 className="address">Based in Mohali/Chandigarh, India</h2>
+      <img className="me" src={image("me.jpg")} alt="Kartikesh" />
+      <h2 className="email">kartikeshsharma59@<br/>gmail.com</h2>
+      <h2 className="address">Based in Pan India</h2>
       <p className="copyright">© 2026 . All Rights Reserved</p>
       <ul className="social-profile d-flex align-items-center flex-wrap justify-content-center">
         {social.map((item) => (
@@ -227,7 +234,7 @@ function PageView({ routeId }) {
               <div className="custom-container">
                 <div className="hero-content content-width">
                   <SectionTitle icon="las la-home" eyebrow="Introduce">
-                    Say Hi from <span>Kartikesh</span>, Framer Designer and
+                    Say Hi from <span>Kartikesh</span>, Frontend
                     Developer
                   </SectionTitle>
                   <p>
@@ -296,7 +303,7 @@ function PageView({ routeId }) {
                   <div className="resume-timeline">
                     {[
                       [
-                        "2024 - Present",
+                        "2024 - 2026",
                         [
                           "React Js Developer",
                           "Outline Systems India",
@@ -456,7 +463,7 @@ function PageView({ routeId }) {
                         onClick={() =>
                           setSlide(
                             (slide + testimonials.length - 1) %
-                              testimonials.length,
+                            testimonials.length,
                           )
                         }
                       >
