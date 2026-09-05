@@ -281,8 +281,8 @@ function PageView({ routeId }) {
                     I'm a Frontend Developer specializing in React.js, focused
                     on building responsive, scalable, and user-friendly web
                     applications. I enjoy turning complex problems into clean,
-                    intuitive interfaces using modern technologies like React,
-                    JavaScript, TypeScript, Redux Toolkit, HTML5, and CSS3.
+                    intuitive interfaces using modern technologies like Reactjs,
+                    JavaScript, TypeScript, Node.js, Redux Toolkit, HTML5, and CSS3.
                     Passionate about writing maintainable code, optimizing
                     performance, and continuously learning new technologies, I
                     strive to create seamless digital experiences that deliver
